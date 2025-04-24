@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#alertCart {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+/* هيظهر بس وقت الإضافة */
+  position: fixed;
+  top: 100px;
+  right: 20px;
+display: none;
+  z-index: 9999999999999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+#CartPage {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+
+  z-index: 9999999 !important;
+}
+#wishlstpage{
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 9999999 !important;
+}
+
+#bodyCart {
+  background: rgb(209, 209, 209);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 50%;
+  width: 100% !important;
+  height: 90%;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index:  99999999999999999999999996;
+  position: relative;
+
+
+}
+
+#bodywishal{
+  background: rgb(209, 209, 209);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 50%;
+  width: 100% !important;
+  height: 90%;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 9999999999999999999999999;
+  position: relative;
+}
+#RemoveAll{
+  position: absolute;
+  bottom: 20px;
+  left:15px;  
+
+}
+.posiItem{
+  position: relative;
+}
+
+.btnIncreDec
+{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+#counter {
+  font-size:15px;
+  margin: 0px 10px;
+  color: #333;
+  background-color: #c2c2c2;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.butom {
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.increment {
+  background-color: #4caf50;
+  color: white;
+}
+
+.decrement {
+  background-color: #f44336;
+  color: white;
+}
+#RemoveItme{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 10px;
+}
+
+
+#closCart ,#closWish{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#closWish{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#closCart:hover {
+  color: rgb(150, 150, 150);
+}
+#closWish:hover {
+  color: rgb(150, 150, 150);
+}
+.nav-link.active {
+  background-color: #ffc107 !important;
+  color: #ffffff !important;
+  border-radius: 20px;
+}
+
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.img-w{
+  width: 15% !important;
+}
+.product-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.product-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.item {
+  background-color: #eaeaea;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease; 
+}
+
+
+.product-body h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+
+  color: #333;
+}
+
+.product-info h3,
+.product-info h4 {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #555;
+}
+
+.product-info .product-id {
+  font-weight: bold;
+  color: #888;
+}
+
+.product-price span {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.product-category {
+  display: inline-block;
+  background-color: rgb(255, 191, 63);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-quantity {
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  background-color: rgb(255, 191, 63);
+  width: 30px;
+  height: 40px;
+  color: white !important;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.btn-size {
+  font-size: 13px !important;
+}
+
+/* زر Add to Cart */
+.add-to-cart-btn {
+  position: absolute;
+
+  top: 65px;
+  right: 10px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 34px;
+  background: white;
+  height: 34px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #f0f0f0;
+}
+
+.add-to-cart-btn:hover i {
+  color: #007b33;
+  /* تغيير اللون عند التحويم */
+}
+
+.add-to-cart-btn:hover {
+  background: #e6f7e6;
+  /* تغيير الخلفية عند التحويم */
+}
+
+.favorite-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  background: #b2b2b2;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.favorite-btn:hover {
+  background: #f0f0f0;
+}
+
+.favorite-btn i {
+  color: #ffffff;
+  /* لون الأيقونة */
+}
+
+.updat-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 120px;
+  right: 8px;
+  background: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.updat-btn i {
+  color: #4caf50;
+  /* لون الأيقونة */
+}
+
+.updat-btn:hover {
+  background: #f0f0f0;
+}
+
+.updat-btn:hover i {
+  color: #2196f3;
+  /* تغيير اللون عند التمرير */
+}
+.margin{
+margin-top: 100px !important;
+
+} 
+#categroy {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin: 20px 0;
+  background-color: #fff;
+  color: #333;
+}
+
+#categroy:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+
+.custom-select {
+  padding: 10px 15px; /* إضافة padding للـ select */
+  border: 1px solid #ccc; /* حدود رقيقة */
+  border-radius: 5px; /* حواف دائرية */
+  background-color: #f8f9fa; /* خلفية فاتحة */
+  font-size: 16px; /* حجم الخط */
+  font-family: Arial, sans-serif; /* نوع الخط */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  cursor: pointer; /* تغيير المؤشر عند المرور على العنصر */
+  width: 200px; /* تحديد عرض الـ select */
+}
+
+.custom-select:focus {
+  outline: none; 
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* إضافة ظل عند التركيز */
+}
+
+.custom-select option {
+  padding: 10px; /* padding داخلي للخيار */
+}
+
+
+/*///////////////////////////////////////*/
+

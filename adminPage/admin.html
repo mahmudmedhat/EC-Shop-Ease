@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../adminPage/admin.css">
+    <link rel="stylesheet" href="../navBarPage/navBar.css">
+</head>
+<body>
+    <header id="navBar"></header>
+
+
+
+
+    <div id="CartPage">
+     
+        <div id="bodyCart" class="crad">
+        
+
+              
+            
+            <i id="closCart" class="fas fs-1 fa-close"></i>
+          
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="w-50 mx-auto margin ">
+        <h1 class="text-center ">store Mange</h1>
+        <label for="productID">productID</label>
+        <input type="text" id="productID" class="form-control  mt-1 mb-3">
+
+        <label for="productName">productName</label>
+        <input type="text" id="productName" class="form-control  mt-1 mb-3">
+    
+    
+        <label for="productPric">productPric:</label>
+        <input type="number" id="productPrice" class="form-control mt-1 mb-3  ">
+  
+        
+    
+
+        <input type="number" id="productQuantity" placeholder="productQuantity.." class="me-3 form-control  mt-1 mb-3  ">
+
+
+        
+        <label for="productdCategory">productdCategory</label>
+        <input type="text" list="categroy" id="productdCategory" class="form-control mt-1 mb-3">
+        <datalist id="categroy">
+            <option value="electronic">electronic</option>
+            <option value="Bag">Bag</option>
+            <option value="Home furniture">Home furniture</option>
+            <option value="SHOS">SHOS</option>
+            <option value="Clothing">Clothing</option>
+        </datalist>
+        <label for="productDescription">productDescription</label>
+        <textarea type="text" id="productDescription" class="form-control mt-1 mb-3"></textarea>
+       
+        <label for="productImg">productCImg</label>
+        <input type="file" id="productImg" class="form-control mt-1 mb-3">
+    <button class="btn btn-outline-primary  " onclick="addProduct()" id="addProduct">Add Product</button>
+    <button id="deletAllP" class="btn btn-danger  mx-auto d-block" onclick="deletALLProduct()">DeletAllProduct <span id="coutOfproduc">()</span></button>
+    <button class="btn btn-outline-warning  d-none" onclick="updataProduct()" id="updatProduct" >updataProduct</button>
+    <div class="container">
+        <input type="text" id="realTimeSearch" oninput="searchProduct()" placeholder="Search....." class="w-75 my-5 mx-auto  form-control">
+      
+
+    </div>
+</div>
+
+        
+    <div class="container py-5">
+        <div class="row py-5 g-5" id="productItem">
+           
+                  
+     
+              
+            
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../adminPage/admin.js"></script>
+</body>
+</html>

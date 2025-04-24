@@ -1,0 +1,281 @@
+/* شبكة الكروت */
+
+.margin{
+position: relative;
+top: 150px;
+}
+
+#CartPage {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+    
+  left: 0;
+  right: 0;
+  height: 100%;
+
+  z-index: 99999999999999999999999999999999 !important;
+}
+.img-w{
+  width: 5% !important;
+}
+#bodyCart {
+  background: rgb(209, 209, 209);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  max-width: 1200px; /* علشان ما يكبرش زيادة */
+  height: auto;
+  margin: 20px auto;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 99999999999;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #bodyCart {
+    width: 95%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  #bodyCart {
+    width: 98%;
+    padding: 12px;
+  }
+}
+#closCart {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+
+#closCart:hover {
+  color: rgb(150, 150, 150);
+}
+
+/* كرت المنتج */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+  position: relative;
+  top: 50px !important;
+}
+
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.product-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-body h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  
+  color: #333;
+}
+
+.product-info h3,
+.product-info h4 {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #555;
+}
+
+.product-info .product-id {
+  font-weight: bold;
+  color: #888;
+}
+
+.product-price span {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.product-category {
+  display: inline-block;
+  background-color:rgb(255, 191, 63);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-quantity{
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  background-color:rgb(255, 191, 63);
+  width: 30px;
+  height: 40px;
+  color: white !important;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+}
+.btn-size{
+  font-size: 13px !important;
+
+}
+
+/* زر Add to Cart */
+.add-to-cart-btn {
+  position: absolute;
+ 
+  top: 65px;
+  right: 10px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 34px;
+  background: white;
+  height: 34px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+
+.add-to-cart-btn:hover {
+  background: #f0f0f0;
+}
+
+.add-to-cart-btn:hover i {
+  color: #007b33; /* تغيير اللون عند التحويم */
+}
+
+.add-to-cart-btn:hover {
+  background: #e6f7e6; /* تغيير الخلفية عند التحويم */
+}
+
+
+.favorite-btn {
+  position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+  top: 10px;
+  right: 10px;
+  background: #b2b2b2;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.favorite-btn:hover {
+  background: #f0f0f0;
+}
+.favorite-btn i {
+  color: #ffffff; /* لون الأيقونة */
+}
+
+
+
+.updat-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 120px;
+  right: 8px;
+  background: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.updat-btn i {
+  color: #4CAF50; /* لون الأيقونة */
+}
+
+.updat-btn:hover {
+  background: #f0f0f0;
+}
+.updat-btn:hover i {
+  color: #2196F3; /* تغيير اللون عند التمرير */
+}
+
+
+
+@media (max-width: 768px) {
+  /* Adjust the width of the form container on small screens */
+  .form-container {
+    padding: 15px;
+  }
+
+  /* Make inputs take full width on smaller screens */
+  .quantity-input, .tax-input {
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 80%; /* Make search input larger on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust the form layout for very small screens */
+  .form-container {
+    padding: 10px;
+  }
+
+  /* Make form controls take full width */
+  .form-control {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

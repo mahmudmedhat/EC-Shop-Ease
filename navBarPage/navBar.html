@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <link rel="stylesheet" href="../navBarPage/navBar.css">
+
+</head>
+
+<body>
+  <nav id="navBar" class="navbar position-fixed navbar-expand-lg navbar-dark bg-dark px-5">
+    <a class="navbar-brand" href="#"><span class="text-danger fs-2 fw-bold">s</span>hop-Ease</a>
+  
+    <!-- زر التبديل للشاشات الصغيرة -->
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- عناصر شريط التنقل -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+      
+        <li class="nav-item count">
+          <span id="countOfwishlist"></span>
+          <a id="wishlstPage" class="nav-link me-2" href="#"><i class="fa-regular fs-2 fa-heart"></i></a>
+        </li>
+        <li class="nav-item count">
+          <span id="countOfCart"></span>
+          <a id="cartPage" class="nav-link me-2" href="#"><i class="fa-solid fs-2 fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item">
+          <a id="homePage" class="nav-link me-2 mb-1" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <span id="adminName" class="text-white me-2"></span>
+        </li>
+        <li class="nav-item">
+          <a id="signUpPage" class="nav-link me-2" href="../signUp/signUp.html">SignUp</a>
+        </li>
+        <li class="nav-item">
+          <a id="loginPage" class="nav-link me-2" href="../loginPage/login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a id="logoutPage" class="nav-link me-2" href="#">LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../navBarPage/navBar.js"></script>
+</body>
+
+</html>

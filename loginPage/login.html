@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/all.min.css">
+<link rel="stylesheet" href="../loginPage/login.css">
+<link rel="stylesheet" href="../navBarPage/navBar.css">
+
+</head>
+<body>
+<header id="navBar"></header>
+    <span id="alertSuccess" class="  w-25 mx-auto"></span>
+<section>
+    <div class="form  py-5">
+        <div>
+            <label class="label-responsive"  for="yourEmail">Enter your email :</label>
+            <input type="email" name="yourEmail" id="userEmail" class="form-control input-responsive">
+            <p id="yourEmailErr" class="alert  alert-danger mt-1"></p>
+        </div>
+        <div>
+            <label class="label-responsive" for="yourPassword">Password :</label>
+            <input type="password" name="yourPassword" id="userPassword" class="form-control input-responsive">
+            <p id="yourPassErr" class="alert  alert-danger mt-1"></p>
+        </div>
+
+    <button id="SignIn" onclick="singIn()" class="btn btn-warning  btn-responsive mt-3 text-white w-50 d-block mx-auto">SignIn</button>
+   
+    <div class="d-flex justify-content-center  mt-2">
+
+        <p class="d-flex fw-bold">Don't have an account?</p>
+    
+        <a class="text-info text-decoration-none ps-2" href="../signUp/signUp.html"> Register</a>
+ 
+    </div>
+</div>
+</section>
+
+<div id="loader" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../loginPage/login.js"></script>
+</body>
+</html>

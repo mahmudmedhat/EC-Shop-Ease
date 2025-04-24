@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/all.min.css">
+<link rel="stylesheet" href="../signUp/signUp.css">
+<link rel="stylesheet" href="../navBarPage/navBar.css">
+<body>
+    <header id="navBar"></header>
+        <span id="alertSuccess" class="  w-25 mx-auto"></span>
+<section>
+    <div class="form mx-auto my-5">
+        <div>
+            <label for="yourName">Enter your name :</label>
+            <input type="text" name="yourName" id="userName" class="form-control">
+            <p id="yourNameErr" class="alert  alert-danger mt-1"></p>
+        </div>
+        <div>
+            <label for="yourEmail">Enter your email :</label>
+            <input type="email" name="yourEmail" id="userEmail" class="form-control">
+            <p id="yourEmailErr" class="alert  alert-danger mt-1"></p>
+        </div>
+        <div>
+            <label for="yourPassword">Password :</label>
+            <input type="password" name="yourPassword" id="userPassword" class="form-control">
+            <p id="yourPassErr" class="alert  alert-danger mt-1"></p>
+        </div>
+        <div>
+            <label for="ConfirmPassword">Confirm Password :</label>
+            <input type="password" name="ConfirmPassword" id="Confirmpassword" class="form-control">
+            <p id="yourConfPassErr" class="alert  alert-danger mt-1"></p>
+        </div>
+
+  
+          <button id="submitData" onclick="addUser()" class="btn btn-warning mt-2 d-block w-50 mx-auto text-white"> SignUp</button>
+
+               
+           <div class="d-flex justify-content-center  mt-2">
+
+            <p class="d-flex fw-bold">Already have an account?</p>
+        
+            <a class="text-info text-decoration-none ps-2" href="../loginPage/login.html"> Sign In</a>
+     
+        </div>
+
+
+    </div>
+</section>
+
+<div id="loader" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+<script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../signUp/saignUp.js"></script>
+
+</body>
+</html>
