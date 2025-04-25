@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bacgroundImg{
+    background-image: url(./adminPage/image/banner-3.png);
+    background-size: cover;
+    height: 100vb;
+    display: flex;
+position: relative;
+}
+
+
+.textIN {
+    position: absolute;
+    top: 200px;
+    text-align: left;
+    margin-left: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  }
+  
+  .textIN p {
+    font-size: 24px;
+    color: #333;
+    animation: slideLeftRight 8s linear infinite;
+  }
+  
+
+  .textIN span {
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+  .textIN span span {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #dc3545;
+    padding-right: 5px;
+
+  }
+  
+  .textIN strong {
+    font-size: 32px;
+    color: #e76f51;
+    display: block;
+    margin: 10px 0;
+  }
+  
+
+
+
+  h4 {
+    font-size: 20px;
+    color: #333; /* لون النص الأساسي */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h4 a {
+    color: #2a9d8f; /* لون الرابط */
+    text-decoration: none; /* إزالة خط تحت الرابط */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  h4 a:hover {
+    color: #e76f51; /* لون الرابط عند التمرير */
+  }
+  
+
+
+  .train-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+  
+  .train-image {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    animation: slideRight 8s linear infinite;
+  }
+  
+  /* delay لكل صورة */
+  .train-image:nth-child(2) {
+    animation-delay: 2s;
+  }
+  .train-image:nth-child(3) {
+    animation-delay: 4s;
+  }
+  .train-image:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  /* الحركة */
+  @keyframes slideRight {
+    0% {
+      left: -220px; /* خارج الشاشة من اليسار */
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    80% {
+      left: 100%; /* تتحرك لليمين */
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .train-container {
+      display: none;
+    }
+  }

@@ -215,7 +215,7 @@ else{
 
 
 
-
+//
 function addProduct() {
   var product = {
     Image: `../adminPage/image/${productImg.files[0]?.name}`,

@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.toop{
+  top: 100px !important;
+  position: relative;
+}
 #alertCart {
   background-color: #d4edda;
   color: #155724;

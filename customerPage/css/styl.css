@@ -1,0 +1,57 @@
+hr{
+    width: 30px;
+    height: 4px;
+    margin: auto;
+}
+.btn{
+    padding: 10px 16px;
+    text-transform: capitalize;
+    font-weight: 700;
+
+}
+/* proudct detail */
+.proudet_d .qauntiy{
+    width: 50px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 1rem;
+    color: #212529;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.proudet_d .qauntiy:focus{
+    outline: none;
+}
+
+
+/* related proudct */
+#related_proudct a .img-fluid{
+    transition: .3s;
+} 
+#related_proudct .img-fluid:hover{
+    opacity: .7;
+} 
+
+.p-name a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.p-price{
+    font-size: 1rem;
+    margin: 10px 0 16px;
+    color: #BFBFBF;
+    font-weight: 700;
+
+}
+#related_proudct .product .btn{
+    transform: translateY(20px);
+    opacity: 0;
+    transition: .3s;
+}
+#related_proudct .product:hover .btn{
+    transform: translateY(0);
+    opacity: 1;
+}

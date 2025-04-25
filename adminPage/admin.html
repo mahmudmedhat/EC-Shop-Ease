@@ -35,24 +35,24 @@
     <div class="w-50 mx-auto margin ">
         <h1 class="text-center ">store Mange</h1>
         <label for="productID">productID</label>
-        <input type="text" id="productID" class="form-control  mt-1 mb-3">
+        <input required type="text" id="productID" class="form-control  mt-1 mb-3">
 
         <label for="productName">productName</label>
-        <input type="text" id="productName" class="form-control  mt-1 mb-3">
+        <input required type="text" id="productName" class="form-control  mt-1 mb-3">
     
     
         <label for="productPric">productPric:</label>
-        <input type="number" id="productPrice" class="form-control mt-1 mb-3  ">
+        <input required type="number" id="productPrice" class="form-control mt-1 mb-3  ">
   
         
     
 
-        <input type="number" id="productQuantity" placeholder="productQuantity.." class="me-3 form-control  mt-1 mb-3  ">
+        <input required type="number" id="productQuantity" placeholder="productQuantity.." class="me-3 form-control  mt-1 mb-3  ">
 
 
         
         <label for="productdCategory">productdCategory</label>
-        <input type="text" list="categroy" id="productdCategory" class="form-control mt-1 mb-3">
+        <input required type="text" list="categroy" id="productdCategory" class="form-control mt-1 mb-3">
         <datalist id="categroy">
             <option value="electronic">electronic</option>
             <option value="Bag">Bag</option>
@@ -61,10 +61,10 @@
             <option value="Clothing">Clothing</option>
         </datalist>
         <label for="productDescription">productDescription</label>
-        <textarea type="text" id="productDescription" class="form-control mt-1 mb-3"></textarea>
+        <textarea required type="text" id="productDescription" class="form-control mt-1 mb-3"></textarea>
        
         <label for="productImg">productCImg</label>
-        <input type="file" id="productImg" class="form-control mt-1 mb-3">
+        <input required type="file" id="productImg" class="form-control mt-1 mb-3">
     <button class="btn btn-outline-primary  " onclick="addProduct()" id="addProduct">Add Product</button>
     <button id="deletAllP" class="btn btn-danger  mx-auto d-block" onclick="deletALLProduct()">DeletAllProduct <span id="coutOfproduc">()</span></button>
     <button class="btn btn-outline-warning  d-none" onclick="updataProduct()" id="updatProduct" >updataProduct</button>
